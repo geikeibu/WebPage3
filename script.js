@@ -1,4 +1,6 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
 // スクロールで .reveal 要素に .is-visible を付与
 (() => {
   const targets = document.querySelectorAll('.reveal');
@@ -21,3 +23,27 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
   targets.forEach(el => io.observe(el));
 })();
+
+// ヒーローのパララックス
+const hero = document.querySelector('.neon-hero');
+if (hero) {
+  window.addEventListener('scroll', () => {
+    const offset = window.scrollY * 0.3;
+    hero.style.backgroundPosition = `center calc(50% + ${offset}px)`;
+  });
+}
+
+// トピックフィルタ
+const chips = document.querySelectorAll('.chip-group .chip');
+const articles = document.querySelectorAll('.article-list .article-card');
+chips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    chips.forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    const topic = chip.dataset.topic;
+    articles.forEach(a => {
+      const topics = a.dataset.topic.split(' ');
+      a.style.display = topic === 'all' || topics.includes(topic) ? '' : 'none';
+    });
+  });
+});
