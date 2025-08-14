@@ -23,6 +23,10 @@
       <a href="./projects.html">Projects</a>
       <a href="./about.html">About</a>
     </nav>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="タグ・人物・用語を検索">
+      <ul id="suggestions" class="suggestions"></ul>
+    </div>
   </div>
 </header>
 
@@ -36,14 +40,77 @@
     </div>
   </section>
 
+  <section class="newsletter card reveal">
+    <h2>週1で“ゲーム×経済学”の新ネタと図解</h2>
+    <p>最新コンテンツをメールで受け取り、サンプルPDFもチェックできます。</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="メールアドレス" required>
+      <button type="submit" class="btn">登録する</button>
+    </form>
+    <div class="pdf-preview-wrapper">
+      <iframe src="sample-newsletter.pdf" class="pdf-preview"></iframe>
+    </div>
+  </section>
+
 <section class="card reveal" style="margin-top:20px">
     <h2>最新トピック</h2>
     <p>最新の記事やお知らせを3つほど掲載する予定です。</p>
   </section>
+
+  <section class="social-proof card reveal" style="margin-top:20px">
+    <h2>みんなに読まれています</h2>
+    <ul class="proof-list">
+      <li><strong>1,200+</strong> 名の購読者</li>
+      <li><strong>300+</strong> 件のXでの言及</li>
+      <li><strong>5</strong> 社のメディア掲載</li>
+    </ul>
+  </section>
 </main>
 
-<footer class="container" style="opacity:.7;padding-bottom:56px">
-  <small>© 2025 げーけい部！</small>
+<div id="exit-modal" class="modal">
+  <div class="modal-content">
+    <button id="modal-close">&times;</button>
+    <h2>週1で“ゲーム×経済学”の新ネタと図解</h2>
+    <p>ニュースレターに登録してサンプルPDFをチェック！</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="メールアドレス" required>
+      <button type="submit" class="btn">登録する</button>
+    </form>
+    <div class="pdf-preview-wrapper">
+      <iframe src="sample-newsletter.pdf" class="pdf-preview"></iframe>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-col">
+      <h3>サイトマップ</h3>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a href="./about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>用語集 & ポリシー</h3>
+      <ul>
+        <li><a href="./glossary.html">用語集</a></li>
+        <li><a href="./policy.html">運営ポリシー</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>連絡先</h3>
+      <ul>
+        <li><a href="mailto:info@example.com">info@example.com</a></li>
+        <li><a href="https://x.com" target="_blank" rel="noopener">X</a></li>
+        <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container copyright">
+    <small>© <span id="year"></span> げーけい部！</small>
+  </div>
 </footer>
 <script src="./script.js"></script>
 </body>

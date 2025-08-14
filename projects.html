@@ -19,6 +19,10 @@
       <a href="./projects.html">Projects</a>
       <a href="./about.html">About</a>
     </nav>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="タグ・人物・用語を検索">
+      <ul id="suggestions" class="suggestions"></ul>
+    </div>
   </div>
 </header>
 
@@ -56,8 +60,35 @@
   </section>
 </main>
 
-<footer class="container" style="opacity:.7;padding-bottom:56px">
-  <small>© 2025 げーけい部！</small>
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-col">
+      <h3>サイトマップ</h3>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a href="./about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>用語集 & ポリシー</h3>
+      <ul>
+        <li><a href="./glossary.html">用語集</a></li>
+        <li><a href="./policy.html">運営ポリシー</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>連絡先</h3>
+      <ul>
+        <li><a href="mailto:info@example.com">info@example.com</a></li>
+        <li><a href="https://x.com" target="_blank" rel="noopener">X</a></li>
+        <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container copyright">
+    <small>© <span id="year"></span> げーけい部！</small>
+  </div>
 </footer>
 <script src="./script.js"></script>
 </body>

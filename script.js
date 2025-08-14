@@ -21,3 +21,40 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
   targets.forEach(el => io.observe(el));
 })();
+
+// 検索バーの先読みサジェスト
+const keywords = ['囚人のジレンマ','価格弾力性','ナッシュ均衡','ゲーム理論','限界費用','期待効用'];
+const searchBar = document.querySelector('.search-bar');
+if(searchBar){
+  const input = searchBar.querySelector('#search-input');
+  const list = searchBar.querySelector('#suggestions');
+  input.addEventListener('input', () => {
+    const q = input.value.trim();
+    if(!q){ list.innerHTML=''; searchBar.classList.remove('open'); return; }
+    const matches = keywords.filter(k => k.includes(q));
+    list.innerHTML = matches.map(m => `<li>${m}</li>`).join('');
+    searchBar.classList.toggle('open', matches.length>0);
+  });
+  list.addEventListener('click', e => {
+    if(e.target.tagName === 'LI'){
+      input.value = e.target.textContent;
+      list.innerHTML='';
+      searchBar.classList.remove('open');
+    }
+  });
+}
+
+// 離脱時モーダル表示
+const exitModal = document.getElementById('exit-modal');
+let modalShown = false;
+if(exitModal){
+  document.addEventListener('mouseleave', e => {
+    if(e.clientY <= 0 && !modalShown){
+      exitModal.classList.add('show');
+      modalShown = true;
+    }
+  });
+  document.getElementById('modal-close').addEventListener('click', () => {
+    exitModal.classList.remove('show');
+  });
+}
