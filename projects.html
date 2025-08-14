@@ -1,41 +1,64 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Projects - Our Org</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <nav class="container">
-        <a class="brand" href="/">OurOrg</a>
-        <ul class="nav">
-          <li><a href="home.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a aria-current="page" href="projects.html">Projects</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projects | げーけい部！</title>
+<meta name="description" content="記事やプロジェクトの一覧。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Orbitron:wght@600;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="inner">
+    <div class="brand">げーけい部！</div>
+    <nav class="nav">
+      <a href="./index.html">Home</a>
+      <a href="./projects.html">Projects</a>
+      <a href="./about.html">About</a>
+    </nav>
+  </div>
+</header>
 
-    <main class="container">
-      <h1>Projects</h1>
-      <ul class="cards">
-        <li class="card"><h3>Project A</h3><p>説明テキスト</p></li>
-        <li class="card"><h3>Project B</h3><p>説明テキスト</p></li>
-        <li class="card"><h3>Project C</h3><p>説明テキスト</p></li>
-      </ul>
-    </main>
+<main class="container">
+  <section class="hero card">
+    <span class="badge">PROJECTS</span>
+    <h1>記事とプロジェクト一覧</h1>
+    <p>ゲームの仕組みから経済を学ぶ、短く読みやすいコンテンツを集めました。</p>
+  </section>
 
-    <footer class="site-footer">
-      <div class="container">
-        <small>&copy; <span id="year"></span> OurOrg</small>
-      </div>
-    </footer>
+  <section class="card" style="margin-top:20px">
+    <h2 style="margin-bottom:12px">最新記事</h2>
+    <div class="grid">
+      <a class="article-card" href="./index.html">
+        <div class="thumb"></div>
+        <div class="title">MMOの「市場」と価格の動き</div>
+        <div class="meta">2025-08-01 · <span class="tag">需要と供給</span></div>
+        <p>ゲーム内オークションの値動きからインフレ/デフレをやさしく解説。</p>
+      </a>
 
-    <script src="script.js"></script>
-  </body>
+      <a class="article-card" href="./index.html">
+        <div class="thumb"></div>
+        <div class="title">ガチャ確率と期待値の話</div>
+        <div class="meta">2025-07-20 · <span class="tag">期待値</span></div>
+        <p>“何回引けば元が取れる？” を直感でつかむための超入門。</p>
+      </a>
+
+      <a class="article-card" href="./index.html">
+        <div class="thumb"></div>
+        <div class="title">バトルパスの価格設計を覗く</div>
+        <div class="meta">2025-07-05 · <span class="tag">価格戦略</span></div>
+        <p>継続率と価格帯の関係をミニ事例でチェック。</p>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="container" style="opacity:.7;padding-bottom:56px">
+  <small>© 2025 げーけい部！</small>
+</footer>
+<script src="./script.js"></script>
+</body>
 </html>
