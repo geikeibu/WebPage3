@@ -26,19 +26,74 @@
   </div>
 </header>
 
-<main class="container">
-<section class="hero card reveal">
-    <span class="badge">GAME × ECONOMICS</span>
-    <h1>ゲームで、経済はもっと身近になる。</h1>
-    <p>「げーけい部！」は、ゲームの世界観や仕組みから経済の考え方を学べるWEBメディアです。初心者でも“なんとなく”から一歩先へ進めるよう、やさしく解説します。</p>
-    <div class="cta">
-      <a class="btn" href="./projects.html">記事・プロジェクトを見る</a>
+<main>
+  <section class="hero neon-hero reveal">
+    <div class="hero-inner container">
+      <span class="badge">GAME × ECONOMICS</span>
+      <h1 class="catch">ネオンの街で、経済をゲームのように学ぶ。</h1>
+      <p class="sub">難しそうな理論も、光るインターフェースで体感的に理解しよう。</p>
+      <div class="cta">
+        <a class="btn" href="#latest">最新記事</a>
+        <a class="btn" href="#courses">学ぶコース</a>
+        <a class="btn" href="#labs">遊ぶ（実験）</a>
+      </div>
     </div>
   </section>
 
-<section class="card reveal" style="margin-top:20px">
-    <h2>最新トピック</h2>
-    <p>最新の記事やお知らせを3つほど掲載する予定です。</p>
+  <section class="topics card reveal container" id="latest" style="margin-top:32px">
+    <h2>トピックで探す</h2>
+    <div class="chip-group">
+      <button class="chip active" data-topic="all">すべて</button>
+      <button class="chip" data-topic="game">ゲーム理論</button>
+      <button class="chip" data-topic="micro">ミクロ</button>
+      <button class="chip" data-topic="macro">マクロ</button>
+      <button class="chip" data-topic="industry">産業事例</button>
+      <button class="chip" data-topic="esports">eスポーツ経済</button>
+    </div>
+    <div class="grid article-list" style="margin-top:24px">
+      <article class="article-card" data-topic="game micro">
+        <div class="thumb"></div>
+        <div class="title">囚人のジレンマを実際のゲームで体験</div>
+        <div class="meta">5分・初級</div>
+        <span class="tag">ゲーム理論</span>
+      </article>
+      <article class="article-card" data-topic="macro industry">
+        <div class="thumb"></div>
+        <div class="title">ゲーム市場から見る景気循環</div>
+        <div class="meta">8分・中級</div>
+        <span class="tag">マクロ</span>
+      </article>
+      <article class="article-card" data-topic="esports micro">
+        <div class="thumb"></div>
+        <div class="title">eスポーツチームの収益構造</div>
+        <div class="meta">6分・初級</div>
+        <span class="tag">eスポーツ経済</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="picks container reveal" id="picks" style="margin-top:40px">
+    <h2>編集部ピック</h2>
+    <div class="pick-grid">
+      <article class="pick-card large">
+        <h3>経済の基礎をネオン街で駆け抜ける</h3>
+        <p class="meta">所要時間:10分 / 難易度:中級</p>
+        <div class="tags"><span class="tag">ミクロ</span> <span class="tag">ゲーム理論</span></div>
+        <div class="progress"><span style="width:60%"></span></div>
+      </article>
+      <article class="pick-card medium">
+        <h3>アイテム経済から学ぶ需給バランス</h3>
+        <p class="meta">所要時間:4分 / 難易度:初級</p>
+        <div class="tags"><span class="tag">産業事例</span></div>
+        <div class="progress"><span style="width:30%"></span></div>
+      </article>
+      <article class="pick-card medium">
+        <h3>プロゲーマーの年収と期待値</h3>
+        <p class="meta">所要時間:7分 / 難易度:上級</p>
+        <div class="tags"><span class="tag">eスポーツ経済</span></div>
+        <div class="progress"><span style="width:80%"></span></div>
+      </article>
+    </div>
   </section>
 </main>
 
