@@ -1,0 +1,11 @@
+*{box-sizing:border-box}html,body{margin:0;padding:0}body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:#222}
+.container{max-width:960px;margin:0 auto;padding:16px}
+.site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee}
+.brand{font-weight:700;text-decoration:none;margin-right:16px}
+.nav{list-style:none;display:flex;gap:12px;margin:0;padding:0}
+.nav a{text-decoration:none}
+.hero{padding:48px 0}
+.button{display:inline-block;padding:10px 16px;border:1px solid #ddd;border-radius:10px;text-decoration:none}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;padding:0;list-style:none}
+.card{border:1px solid #eee;border-radius:10px;padding:12px}
+.site-footer{border-top:1px solid #eee;margin-top:48px;padding:16px 0;color:#555}
