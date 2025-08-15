@@ -12,14 +12,18 @@
   </head>
   <body>
     <header class="site-header">
-      <nav class="container">
-        <a class="brand" href="/">OurOrg</a>
-        <ul class="nav">
-          <li><a aria-current="page" href="home.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-        </ul>
-      </nav>
+      <div class="inner">
+        <div class="brand">げーけい部！</div>
+        <nav class="nav">
+          <a href="./index.html">Home</a>
+          <a href="./projects.html">Projects</a>
+          <a href="./about.html">About</a>
+        </nav>
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="タグ・人物・用語を検索">
+          <ul id="suggestions" class="suggestions"></ul>
+        </div>
+      </div>
     </header>
 
     <main class="container">
@@ -32,8 +36,33 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <small>&copy; <span id="year"></span> OurOrg</small>
+      <div class="container footer-content">
+        <div class="footer-col">
+          <h3>サイトマップ</h3>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>用語集 & ポリシー</h3>
+          <ul>
+            <li><a href="./glossary.html">用語集</a></li>
+            <li><a href="./policy.html">運営ポリシー</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>連絡先</h3>
+          <ul>
+            <li><a href="mailto:info@example.com">info@example.com</a></li>
+            <li><a href="https://x.com" target="_blank" rel="noopener">X</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container copyright">
+        <small>© <span id="year"></span> げーけい部！</small>
       </div>
     </footer>
 

@@ -24,26 +24,39 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   targets.forEach(el => io.observe(el));
 })();
 
-// ヒーローのパララックス
-const hero = document.querySelector('.neon-hero');
-if (hero) {
-  window.addEventListener('scroll', () => {
-    const offset = window.scrollY * 0.3;
-    hero.style.backgroundPosition = `center calc(50% + ${offset}px)`;
+// 検索バーの先読みサジェスト
+const keywords = ['囚人のジレンマ','価格弾力性','ナッシュ均衡','ゲーム理論','限界費用','期待効用'];
+const searchBar = document.querySelector('.search-bar');
+if(searchBar){
+  const input = searchBar.querySelector('#search-input');
+  const list = searchBar.querySelector('#suggestions');
+  input.addEventListener('input', () => {
+    const q = input.value.trim();
+    if(!q){ list.innerHTML=''; searchBar.classList.remove('open'); return; }
+    const matches = keywords.filter(k => k.includes(q));
+    list.innerHTML = matches.map(m => `<li>${m}</li>`).join('');
+    searchBar.classList.toggle('open', matches.length>0);
+  });
+  list.addEventListener('click', e => {
+    if(e.target.tagName === 'LI'){
+      input.value = e.target.textContent;
+      list.innerHTML='';
+      searchBar.classList.remove('open');
+    }
   });
 }
 
-// トピックフィルタ
-const chips = document.querySelectorAll('.chip-group .chip');
-const articles = document.querySelectorAll('.article-list .article-card');
-chips.forEach(chip => {
-  chip.addEventListener('click', () => {
-    chips.forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    const topic = chip.dataset.topic;
-    articles.forEach(a => {
-      const topics = a.dataset.topic.split(' ');
-      a.style.display = topic === 'all' || topics.includes(topic) ? '' : 'none';
-    });
+// 離脱時モーダル表示
+const exitModal = document.getElementById('exit-modal');
+let modalShown = false;
+if(exitModal){
+  document.addEventListener('mouseleave', e => {
+    if(e.clientY <= 0 && !modalShown){
+      exitModal.classList.add('show');
+      modalShown = true;
+    }
   });
-});
+  document.getElementById('modal-close').addEventListener('click', () => {
+    exitModal.classList.remove('show');
+  });
+}
