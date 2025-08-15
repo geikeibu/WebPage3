@@ -60,3 +60,18 @@ if(exitModal){
     exitModal.classList.remove('show');
   });
 }
+
+// 初心者/上級者トグル
+const pathToggle = document.querySelectorAll('.path-toggle .chip');
+const recoLists = document.querySelectorAll('.reco-list');
+if(pathToggle.length){
+  pathToggle.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const level = btn.dataset.level;
+      pathToggle.forEach(b => b.classList.toggle('active', b === btn));
+      recoLists.forEach(list => {
+        list.classList.toggle('active', list.dataset.level === level);
+      });
+    });
+  });
+}

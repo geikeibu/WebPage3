@@ -55,6 +55,14 @@ a:hover{color:#0D0F1A;background:var(--neon-magenta);box-shadow:0 0 12px var(--n
 .pick-card .tags{margin-top:8px}
 .progress{height:6px;background:#222;border-radius:3px;overflow:hidden;margin-top:12px}
 .progress span{display:block;height:100%;background:linear-gradient(90deg,var(--neon-magenta),var(--neon-cyan));box-shadow:0 0 6px var(--neon-magenta)}
+/* === 連載ハブ === */
+.series-scroll{display:flex;gap:16px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
+.series-card{flex:0 0 220px;background:#151926;border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:16px;scroll-snap-align:start}
+
+/* === パス分岐トグル === */
+.path-toggle{margin-top:8px}
+.reco-list{display:none}
+.reco-list.active{display:grid}
 /* === Motion tokens (共通の速さ/イージング) === */
 :root{ --ease-out: cubic-bezier(.22,.61,.36,1); --dur-quick:.28s; --dur-slow:.6s; }
 
