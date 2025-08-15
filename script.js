@@ -60,3 +60,23 @@ if(exitModal){
     exitModal.classList.remove('show');
   });
 }
+
+// ミニ実験：価格と数量で売上を表示
+const priceInput = document.getElementById('price');
+const qtyInput = document.getElementById('quantity');
+const revenue = document.getElementById('revenue');
+const eqPoint = document.getElementById('eqPoint');
+function updateLab(){
+  const price = Number(priceInput.value);
+  const qty = Number(qtyInput.value);
+  revenue.textContent = `売上: ¥${price * qty}`;
+  const x = (qty / 100) * 200;
+  const y = 200 - (price / 100) * 200;
+  eqPoint.setAttribute('cx', x);
+  eqPoint.setAttribute('cy', y);
+}
+if(priceInput && qtyInput && eqPoint){
+  priceInput.addEventListener('input', updateLab);
+  qtyInput.addEventListener('input', updateLab);
+  updateLab();
+}
