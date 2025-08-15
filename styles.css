@@ -1,6 +1,6 @@
 :root{--neon-magenta:#FF2EFF;--neon-cyan:#00E5FF;--electric-purple:#9A00FF;--night-slate:#0D0F1A;--radius:18px}
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--night-slate);color:#E8EEFF;font-family:"Noto Sans JP",system-ui,sans-serif;line-height:1.6}
+html,body{margin:0;padding:0;background:var(--night-slate);color:#F0F4FF;font-family:"Noto Sans JP",system-ui,sans-serif;line-height:1.6}
 h1,h2,h3{font-family:"Orbitron","Noto Sans JP",sans-serif;margin:0 0 .5em}
 a{color:var(--neon-cyan);text-decoration:none}
 a:hover{color:#0D0F1A;background:var(--neon-magenta);box-shadow:0 0 12px var(--neon-magenta);border-radius:8px}
@@ -11,7 +11,7 @@ a:hover{color:#0D0F1A;background:var(--neon-magenta);box-shadow:0 0 12px var(--n
 .brand{font-weight:800;font-size:20px;color:var(--neon-magenta);text-shadow:0 0 8px rgba(255,46,255,.8)}
 .nav{display:flex;gap:16px}
 .search-bar{position:relative}
-.search-bar input{padding:6px 8px;border-radius:var(--radius);border:1px solid var(--neon-cyan);background:#151926;color:#E8EEFF;min-width:180px}
+.search-bar input{padding:6px 8px;border-radius:var(--radius);border:1px solid var(--neon-cyan);background:#151926;color:#F0F4FF;min-width:180px}
 .suggestions{list-style:none;margin:0;padding:0;position:absolute;top:100%;left:0;right:0;background:#151926;border:1px solid rgba(255,255,255,.1);border-top:none;max-height:160px;overflow-y:auto;display:none;z-index:20}
 .suggestions li{padding:6px 8px;cursor:pointer}
 .suggestions li:hover{background:rgba(255,255,255,.1)}
@@ -23,14 +23,24 @@ a:hover{color:#0D0F1A;background:var(--neon-magenta);box-shadow:0 0 12px var(--n
 .hero p{max-width:700px;opacity:.9}
 .hero .cta{margin-top:16px}
 .badge{font-family:"Press Start 2P",monospace;font-size:12px;color:var(--neon-cyan)}
+/* === Page Structure === */
+main > section + section {
+  margin-top: 40px;
+}
+#labs > .grid,
+.topics > .grid,
+.path > .grid {
+  margin-top: 24px;
+}
+
 /* === Article Grid === */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .article-card{display:block;background:#151926;border-radius:var(--radius);padding:16px;
   border:1px solid rgba(255,255,255,.06);transition:box-shadow .2s, transform .2s}
 .article-card:hover{box-shadow:0 0 18px rgba(0,229,255,.65);transform:translateY(-2px)}
-.article-card .title{font-weight:700;margin:.25em 0;color:#E8EEFF}
-.article-card .meta{font-size:12px;opacity:.75;margin-bottom:.25em}
-.tag{display:inline-block;border:1px solid var(--neon-cyan);border-radius:999px;padding:2px 8px;font-size:12px}
+.article-card .title{font-weight:700;margin:.25em 0;color:#F0F4FF}
+.article-card .meta{font-size:13px;opacity:.75;margin-bottom:.25em}
+.tag{display:inline-block;border:1px solid var(--neon-cyan);border-radius:999px;padding:2px 8px;font-size:13px}
 .thumb{height:120px;border-radius:12px;margin-bottom:12px;
   background:linear-gradient(135deg, rgba(255,46,255,.35), rgba(0,229,255,.25));}
 /* === ネオンヒーロー === */
@@ -117,7 +127,7 @@ a:hover{color:#0D0F1A;background:var(--neon-magenta);box-shadow:0 0 12px var(--n
 
 /* Newsletter CTA */
 .newsletter-form{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-.newsletter-form input{flex:1;padding:8px;border-radius:var(--radius);border:1px solid var(--neon-cyan);background:#151926;color:#E8EEFF}
+.newsletter-form input{flex:1;padding:8px;border-radius:var(--radius);border:1px solid var(--neon-cyan);background:#151926;color:#F0F4FF}
 .pdf-preview-wrapper{margin-top:16px}
 .pdf-preview{width:100%;height:200px;border:1px solid rgba(255,255,255,.1)}
 
@@ -137,7 +147,7 @@ a:hover{color:#0D0F1A;background:var(--neon-magenta);box-shadow:0 0 12px var(--n
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;align-items:center;justify-content:center;padding:24px;z-index:100}
 .modal.show{display:flex}
 .modal-content{background:#151926;border-radius:var(--radius);padding:24px;max-width:500px;width:100%;position:relative}
-#modal-close{position:absolute;top:8px;right:12px;background:none;border:none;font-size:24px;color:#E8EEFF;cursor:pointer}
+#modal-close{position:absolute;top:8px;right:12px;background:none;border:none;font-size:24px;color:#F0F4FF;cursor:pointer}
 
 /* Footer */
 .site-footer{background:#151926;margin-top:40px}
