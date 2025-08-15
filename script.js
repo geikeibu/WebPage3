@@ -1,4 +1,6 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
 // スクロールで .reveal 要素に .is-visible を付与
 (() => {
   const targets = document.querySelectorAll('.reveal');
