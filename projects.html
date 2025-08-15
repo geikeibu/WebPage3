@@ -1,95 +1,116 @@
 <!doctype html>
 <html lang="ja">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Projects | げーけい部！</title>
-<meta name="description" content="記事やプロジェクトの一覧。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Orbitron:wght@600;800&family=Press+Start+2P&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-<header class="site-header">
-  <div class="inner">
-    <div class="brand">げーけい部！</div>
-    <nav class="nav">
-      <a href="./index.html">Home</a>
-      <a href="./projects.html">Projects</a>
-      <a href="./about.html">About</a>
-    </nav>
-    <div class="search-bar">
-      <input type="text" id="search-input" placeholder="タグ・人物・用語を検索">
-      <ul id="suggestions" class="suggestions"></ul>
-    </div>
-  </div>
-</header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects | げーけい部！</title>
+    <meta name="description" content="記事やプロジェクトの一覧。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Orbitron:wght@600;800&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="inner">
+        <div class="brand">げーけい部！</div>
+        <nav class="nav">
+          <a href="./index.html">Home</a>
+          <a href="./projects.html">Projects</a>
+          <a href="./about.html">About</a>
+        </nav>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="タグ・人物・用語を検索"
+          />
+          <ul id="suggestions" class="suggestions"></ul>
+        </div>
+      </div>
+    </header>
 
-<main class="container">
-<section class="hero card reveal">
-    <span class="badge">PROJECTS</span>
-    <h1>記事とプロジェクト一覧</h1>
-    <p>ゲームの仕組みから経済を学べる、短く読みやすいコンテンツを集めました。</p>
-  </section>
+    <main class="container">
+      <section class="hero card reveal">
+        <span class="badge">PROJECTS</span>
+        <h1>記事とプロジェクト一覧</h1>
+        <p>
+          ゲームの仕組みから経済を学べる、短く読みやすいコンテンツを集めました。
+        </p>
+      </section>
 
-  <section class="card" style="margin-top:20px">
-    <h2 style="margin-bottom:12px">最新記事</h2>
-<div class="grid reveal">
-      <a class="article-card" href="./index.html">
-        <div class="thumb"></div>
-        <div class="title">MMOの「市場」と価格の動き</div>
-        <div class="meta">2025-08-01 · <span class="tag">需要と供給</span></div>
-        <p>ゲーム内オークションの値動きを通して、インフレとデフレをやさしく解説します。</p>
-      </a>
+      <section class="card mt-20">
+        <h2 class="mb-12">最新記事</h2>
+        <div class="grid reveal">
+          <a class="article-card" href="./index.html">
+            <div class="thumb"></div>
+            <div class="title">MMOの「市場」と価格の動き</div>
+            <div class="meta">
+              2025-08-01 · <span class="tag">需要と供給</span>
+            </div>
+            <p>
+              ゲーム内オークションの値動きを通して、インフレとデフレをやさしく解説します。
+            </p>
+          </a>
 
-      <a class="article-card" href="./index.html">
-        <div class="thumb"></div>
-        <div class="title">ガチャ確率と期待値の話</div>
-        <div class="meta">2025-07-20 · <span class="tag">期待値</span></div>
-        <p>「何回引けば元が取れる？」を直感でつかむための超入門です。</p>
-      </a>
+          <a class="article-card" href="./index.html">
+            <div class="thumb"></div>
+            <div class="title">ガチャ確率と期待値の話</div>
+            <div class="meta">2025-07-20 · <span class="tag">期待値</span></div>
+            <p>「何回引けば元が取れる？」を直感でつかむための超入門です。</p>
+          </a>
 
-      <a class="article-card" href="./index.html">
-        <div class="thumb"></div>
-        <div class="title">バトルパスの価格設計を覗く</div>
-        <div class="meta">2025-07-05 · <span class="tag">価格戦略</span></div>
-        <p>継続率と価格帯の関係をミニ事例でチェックします。</p>
-      </a>
-    </div>
-  </section>
-</main>
+          <a class="article-card" href="./index.html">
+            <div class="thumb"></div>
+            <div class="title">バトルパスの価格設計を覗く</div>
+            <div class="meta">
+              2025-07-05 · <span class="tag">価格戦略</span>
+            </div>
+            <p>継続率と価格帯の関係をミニ事例でチェックします。</p>
+          </a>
+        </div>
+      </section>
+    </main>
 
-<footer class="site-footer">
-  <div class="container footer-content">
-    <div class="footer-col">
-      <h3>サイトマップ</h3>
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./projects.html">Projects</a></li>
-        <li><a href="./about.html">About</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>用語集 & ポリシー</h3>
-      <ul>
-        <li><a href="./glossary.html">用語集</a></li>
-        <li><a href="./policy.html">運営ポリシー</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>連絡先</h3>
-      <ul>
-        <li><a href="mailto:info@example.com">info@example.com</a></li>
-        <li><a href="https://x.com" target="_blank" rel="noopener">X</a></li>
-        <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="container copyright">
-    <small>© <span id="year"></span> げーけい部！</small>
-  </div>
-</footer>
-<script src="./script.js"></script>
-</body>
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-col">
+          <h3>サイトマップ</h3>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>用語集 & ポリシー</h3>
+          <ul>
+            <li><a href="./glossary.html">用語集</a></li>
+            <li><a href="./policy.html">運営ポリシー</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>連絡先</h3>
+          <ul>
+            <li><a href="mailto:info@example.com">info@example.com</a></li>
+            <li>
+              <a href="https://x.com" target="_blank" rel="noopener">X</a>
+            </li>
+            <li>
+              <a href="https://github.com" target="_blank" rel="noopener"
+                >GitHub</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container copyright">
+        <small>© <span id="year"></span> げーけい部！</small>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
 </html>

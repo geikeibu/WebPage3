@@ -1,255 +1,333 @@
 <!doctype html>
 <html lang="ja">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>げーけい部！ | ゲーム×経済学</title>
-<meta name="description" content="ゲーム×経済学をネオン輝く夜の学び場で。">
-<meta name="theme-color" content="#0D0F1A">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>げーけい部！ | ゲーム×経済学</title>
+    <meta
+      name="description"
+      content="ゲーム×経済学をネオン輝く夜の学び場で。"
+    />
+    <meta name="theme-color" content="#0D0F1A" />
 
-<!-- フォント（Orbitron / Noto Sans JP / Press Start 2P） -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Orbitron:wght@600;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- フォント（Orbitron / Noto Sans JP / Press Start 2P） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Orbitron:wght@600;800&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-<header class="site-header">
-  <div class="inner">
-    <div class="brand">げーけい部！</div>
-    <nav class="nav">
-      <a href="./index.html">Home</a>
-      <a href="./projects.html">Projects</a>
-      <a href="./about.html">About</a>
-    </nav>
-    <div class="search-bar">
-      <input type="text" id="search-input" placeholder="タグ・人物・用語を検索">
-      <ul id="suggestions" class="suggestions"></ul>
-    </div>
-  </div>
-</header>
-
-<main>
-  <section class="hero neon-hero reveal">
-    <div class="hero-inner container">
-      <span class="badge">GAME × ECONOMICS</span>
-      <h1 class="catch">ネオンの街で、経済をゲームのように学ぶ。</h1>
-      <p class="sub">難しそうな理論も、光るインターフェースで体感的に理解しよう。</p>
-      <div class="cta">
-        <a class="btn" href="#latest">最新記事</a>
-        <a class="btn" href="#courses">学ぶコース</a>
-        <a class="btn" href="#labs">遊ぶ（実験）</a>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="labs" class="container reveal">
-    <h2>学べる遊び場</h2>
-    <div class="grid">
-      <div class="card playground">
-        <h3>需要と供給を動かす</h3>
-        <p>スライダーで市場の変化をシミュレーション。<a href="projects.html">続きは記事で</a></p>
-        <div class="sliders">
-          <label>需要シフト<input type="range" id="demand-shift" min="-50" max="50" value="0"></label>
-          <label>供給シフト<input type="range" id="supply-shift" min="-50" max="50" value="0"></label>
-        </div>
-        <svg id="sd-chart" viewBox="0 0 200 200">
-          <!-- 軸 -->
-          <line x1="10" y1="190" x2="190" y2="190" stroke="#fff" stroke-width="1"/>
-          <line x1="10" y1="190" x2="10" y2="10" stroke="#fff" stroke-width="1"/>
-          <text x="180" y="185" fill="#fff" font-size="8">数量(Q)</text>
-          <text x="15" y="20" fill="#fff" font-size="8" transform="rotate(-90, 15, 20)">価格(P)</text>
-
-          <line id="demand-curve" stroke="var(--neon-magenta)" stroke-width="2"/>
-          <line id="supply-curve" stroke="var(--neon-cyan)" stroke-width="2"/>
-          <circle id="eqPoint" r="5" fill="#fff"/>
-        </svg>
-        <div class="outputs">
-          <div id="eq-price">均衡価格: ¥-</div>
-          <div id="eq-quantity">均衡数量: -</div>
-          <div id="revenue">総売上: ¥-</div>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="inner">
+        <div class="brand">げーけい部！</div>
+        <nav class="nav">
+          <a href="./index.html">Home</a>
+          <a href="./projects.html">Projects</a>
+          <a href="./about.html">About</a>
+        </nav>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="タグ・人物・用語を検索"
+          />
+          <ul id="suggestions" class="suggestions"></ul>
         </div>
       </div>
-      <a class="card diagram-teaser" href="projects.html">
-        <h3>今週の1分図解</h3>
-        <svg viewBox="0 0 300 160" class="diagram">
-          <polyline points="20,120 80,80 140,100 200,60 260,70" fill="none" stroke="var(--neon-cyan)" stroke-width="3" stroke-linejoin="round"/>
-          <g fill="var(--neon-magenta)">
-            <circle cx="20" cy="120" r="5"/>
-            <circle cx="80" cy="80" r="5"/>
-            <circle cx="140" cy="100" r="5"/>
-            <circle cx="200" cy="60" r="5"/>
-            <circle cx="260" cy="70" r="5"/>
-          </g>
-        </svg>
-        <p>クリックで記事へ</p>
-      </a>
-    </div>
-  </section>
+    </header>
 
+    <main>
+      <section class="hero neon-hero reveal">
+        <div class="hero-inner container">
+          <span class="badge">GAME × ECONOMICS</span>
+          <h1 class="catch">ネオンの街で、経済をゲームのように学ぶ。</h1>
+          <p class="sub">
+            難しそうな理論も、光るインターフェースで体感的に理解しよう。
+          </p>
+          <div class="cta">
+            <a class="btn" href="#latest">最新記事</a>
+            <a class="btn" href="#courses">学ぶコース</a>
+            <a class="btn" href="#labs">遊ぶ（実験）</a>
+          </div>
+        </div>
+      </section>
 
+      <section id="labs" class="container reveal">
+        <h2>学べる遊び場</h2>
+        <div class="grid">
+          <div class="card playground">
+            <h3>需要と供給を動かす</h3>
+            <p>
+              スライダーで市場の変化をシミュレーション。<a href="projects.html"
+                >続きは記事で</a
+              >
+            </p>
+            <div class="sliders">
+              <label
+                >需要シフト<input
+                  type="range"
+                  id="demand-shift"
+                  min="-50"
+                  max="50"
+                  value="0"
+              /></label>
+              <label
+                >供給シフト<input
+                  type="range"
+                  id="supply-shift"
+                  min="-50"
+                  max="50"
+                  value="0"
+              /></label>
+            </div>
+            <svg id="sd-chart" viewBox="0 0 200 200">
+              <!-- 軸 -->
+              <line
+                x1="10"
+                y1="190"
+                x2="190"
+                y2="190"
+                stroke="#fff"
+                stroke-width="1"
+              />
+              <line
+                x1="10"
+                y1="190"
+                x2="10"
+                y2="10"
+                stroke="#fff"
+                stroke-width="1"
+              />
+              <text x="180" y="185" fill="#fff" font-size="8">数量(Q)</text>
+              <text
+                x="15"
+                y="20"
+                fill="#fff"
+                font-size="8"
+                transform="rotate(-90, 15, 20)"
+              >
+                価格(P)
+              </text>
 
-  <section class="topics card reveal container" id="latest">
-    <h2>トピックで探す</h2>
-    <div class="chip-group">
-      <button class="chip active" data-topic="all">すべて</button>
-      <button class="chip" data-topic="game">ゲーム理論</button>
-      <button class="chip" data-topic="micro">ミクロ</button>
-      <button class="chip" data-topic="macro">マクロ</button>
-      <button class="chip" data-topic="industry">産業事例</button>
-      <button class="chip" data-topic="esports">eスポーツ経済</button>
-    </div>
-    <div class="grid article-list">
-      <article class="article-card" data-topic="game micro">
-        <div class="thumb"></div>
-        <div class="title">囚人のジレンマを実際のゲームで体験</div>
-        <div class="meta">5分・初級</div>
-        <span class="tag">ゲーム理論</span>
-      </article>
-      <article class="article-card" data-topic="macro industry">
-        <div class="thumb"></div>
-        <div class="title">ゲーム市場から見る景気循環</div>
-        <div class="meta">8分・中級</div>
-        <span class="tag">マクロ</span>
-      </article>
-      <article class="article-card" data-topic="esports micro">
-        <div class="thumb"></div>
-        <div class="title">eスポーツチームの収益構造</div>
-        <div class="meta">6分・初級</div>
-        <span class="tag">eスポーツ経済</span>
-      </article>
-    </div>
-  </section>
+              <line
+                id="demand-curve"
+                stroke="var(--neon-magenta)"
+                stroke-width="2"
+              />
+              <line
+                id="supply-curve"
+                stroke="var(--neon-cyan)"
+                stroke-width="2"
+              />
+              <circle id="eqPoint" r="5" fill="#fff" />
+            </svg>
+            <div class="outputs">
+              <div id="eq-price">均衡価格: ¥-</div>
+              <div id="eq-quantity">均衡数量: -</div>
+              <div id="revenue">総売上: ¥-</div>
+            </div>
+          </div>
+          <a class="card diagram-teaser" href="projects.html">
+            <h3>今週の1分図解</h3>
+            <svg viewBox="0 0 300 160" class="diagram">
+              <polyline
+                points="20,120 80,80 140,100 200,60 260,70"
+                fill="none"
+                stroke="var(--neon-cyan)"
+                stroke-width="3"
+                stroke-linejoin="round"
+              />
+              <g fill="var(--neon-magenta)">
+                <circle cx="20" cy="120" r="5" />
+                <circle cx="80" cy="80" r="5" />
+                <circle cx="140" cy="100" r="5" />
+                <circle cx="200" cy="60" r="5" />
+                <circle cx="260" cy="70" r="5" />
+              </g>
+            </svg>
+            <p>クリックで記事へ</p>
+          </a>
+        </div>
+      </section>
 
-  <section class="picks container reveal" id="picks">
-    <h2>編集部ピック</h2>
-    <div class="pick-grid">
-      <article class="pick-card large">
-        <h3>経済の基礎をネオン街で駆け抜ける</h3>
-        <p class="meta">所要時間:10分 / 難易度:中級</p>
-        <div class="tags"><span class="tag">ミクロ</span> <span class="tag">ゲーム理論</span></div>
-        <div class="progress"><span style="width:60%"></span></div>
-      </article>
-      <article class="pick-card medium">
-        <h3>アイテム経済から学ぶ需給バランス</h3>
-        <p class="meta">所要時間:4分 / 難易度:初級</p>
-        <div class="tags"><span class="tag">産業事例</span></div>
-        <div class="progress"><span style="width:30%"></span></div>
-      </article>
-      <article class="pick-card medium">
-        <h3>プロゲーマーの年収と期待値</h3>
-        <p class="meta">所要時間:7分 / 難易度:上級</p>
-        <div class="tags"><span class="tag">eスポーツ経済</span></div>
-        <div class="progress"><span style="width:80%"></span></div>
-      </article>
-    </div>
-  </section>
+      <section class="topics card reveal container" id="latest">
+        <h2>トピックで探す</h2>
+        <div class="chip-group">
+          <button class="chip active" data-topic="all">すべて</button>
+          <button class="chip" data-topic="game">ゲーム理論</button>
+          <button class="chip" data-topic="micro">ミクロ</button>
+          <button class="chip" data-topic="macro">マクロ</button>
+          <button class="chip" data-topic="industry">産業事例</button>
+          <button class="chip" data-topic="esports">eスポーツ経済</button>
+        </div>
+        <div class="grid article-list">
+          <article class="article-card" data-topic="game micro">
+            <div class="thumb"></div>
+            <div class="title">囚人のジレンマを実際のゲームで体験</div>
+            <div class="meta">5分・初級</div>
+            <span class="tag">ゲーム理論</span>
+          </article>
+          <article class="article-card" data-topic="macro industry">
+            <div class="thumb"></div>
+            <div class="title">ゲーム市場から見る景気循環</div>
+            <div class="meta">8分・中級</div>
+            <span class="tag">マクロ</span>
+          </article>
+          <article class="article-card" data-topic="esports micro">
+            <div class="thumb"></div>
+            <div class="title">eスポーツチームの収益構造</div>
+            <div class="meta">6分・初級</div>
+            <span class="tag">eスポーツ経済</span>
+          </article>
+        </div>
+      </section>
 
-  <section class="path card reveal container" id="paths">
-    <h2>あなたに合わせて</h2>
-    <div class="chip-group path-toggle">
-      <button class="chip active" data-level="intro">まずは入門</button>
-      <button class="chip" data-level="deep">深掘り</button>
-    </div>
-    <div class="grid reco-list active" data-level="intro">
-      <article class="article-card">
-        <div class="thumb"></div>
-        <div class="title">ゲーム経済のはじめの一歩</div>
-        <div class="meta">5分・初級</div>
-        <span class="tag">ミクロ</span>
-      </article>
-      <article class="article-card">
-        <div class="thumb"></div>
-        <div class="title">価格戦略をゲームで体感</div>
-        <div class="meta">7分・初級</div>
-        <span class="tag">ゲーム理論</span>
-      </article>
-      <article class="article-card">
-        <div class="thumb"></div>
-        <div class="title">通貨の仕組みをRPGで</div>
-        <div class="meta">6分・初級</div>
-        <span class="tag">マクロ</span>
-      </article>
-    </div>
-    <div class="grid reco-list" data-level="deep">
-      <article class="article-card">
-        <div class="thumb"></div>
-        <div class="title">ナッシュ均衡の応用事例</div>
-        <div class="meta">10分・上級</div>
-        <span class="tag">ゲーム理論</span>
-      </article>
-      <article class="article-card">
-        <div class="thumb"></div>
-        <div class="title">仮想経済のインフレ分析</div>
-        <div class="meta">12分・上級</div>
-        <span class="tag">マクロ</span>
-      </article>
-      <article class="article-card">
-        <div class="thumb"></div>
-        <div class="title">eスポーツ市場のファイナンス</div>
-        <div class="meta">9分・上級</div>
-        <span class="tag">eスポーツ経済</span>
-      </article>
-    </div>
-  </section>
+      <section class="picks container reveal" id="picks">
+        <h2>編集部ピック</h2>
+        <div class="pick-grid">
+          <article class="pick-card large">
+            <h3>経済の基礎をネオン街で駆け抜ける</h3>
+            <p class="meta">所要時間:10分 / 難易度:中級</p>
+            <div class="tags">
+              <span class="tag">ミクロ</span>
+              <span class="tag">ゲーム理論</span>
+            </div>
+            <div class="progress">
+              <span style="--progress-width: 60%"></span>
+            </div>
+          </article>
+          <article class="pick-card medium">
+            <h3>アイテム経済から学ぶ需給バランス</h3>
+            <p class="meta">所要時間:4分 / 難易度:初級</p>
+            <div class="tags"><span class="tag">産業事例</span></div>
+            <div class="progress">
+              <span style="--progress-width: 30%"></span>
+            </div>
+          </article>
+          <article class="pick-card medium">
+            <h3>プロゲーマーの年収と期待値</h3>
+            <p class="meta">所要時間:7分 / 難易度:上級</p>
+            <div class="tags"><span class="tag">eスポーツ経済</span></div>
+            <div class="progress">
+              <span style="--progress-width: 80%"></span>
+            </div>
+          </article>
+        </div>
+      </section>
 
-  <section class="social-proof card reveal">
-    <h2>みんなに読まれています</h2>
-    <ul class="proof-list">
-      <li><strong>1,200+</strong> 名の購読者</li>
-      <li><strong>300+</strong> 件のXでの言及</li>
-      <li><strong>5</strong> 社のメディア掲載</li>
-    </ul>
-  </section>
-</main>
+      <section class="path card reveal container" id="paths">
+        <h2>あなたに合わせて</h2>
+        <div class="chip-group path-toggle">
+          <button class="chip active" data-level="intro">まずは入門</button>
+          <button class="chip" data-level="deep">深掘り</button>
+        </div>
+        <div class="grid reco-list active" data-level="intro">
+          <article class="article-card">
+            <div class="thumb"></div>
+            <div class="title">ゲーム経済のはじめの一歩</div>
+            <div class="meta">5分・初級</div>
+            <span class="tag">ミクロ</span>
+          </article>
+          <article class="article-card">
+            <div class="thumb"></div>
+            <div class="title">価格戦略をゲームで体感</div>
+            <div class="meta">7分・初級</div>
+            <span class="tag">ゲーム理論</span>
+          </article>
+          <article class="article-card">
+            <div class="thumb"></div>
+            <div class="title">通貨の仕組みをRPGで</div>
+            <div class="meta">6分・初級</div>
+            <span class="tag">マクロ</span>
+          </article>
+        </div>
+        <div class="grid reco-list" data-level="deep">
+          <article class="article-card">
+            <div class="thumb"></div>
+            <div class="title">ナッシュ均衡の応用事例</div>
+            <div class="meta">10分・上級</div>
+            <span class="tag">ゲーム理論</span>
+          </article>
+          <article class="article-card">
+            <div class="thumb"></div>
+            <div class="title">仮想経済のインフレ分析</div>
+            <div class="meta">12分・上級</div>
+            <span class="tag">マクロ</span>
+          </article>
+          <article class="article-card">
+            <div class="thumb"></div>
+            <div class="title">eスポーツ市場のファイナンス</div>
+            <div class="meta">9分・上級</div>
+            <span class="tag">eスポーツ経済</span>
+          </article>
+        </div>
+      </section>
 
-<div id="exit-modal" class="modal">
-  <div class="modal-content">
-    <button id="modal-close">&times;</button>
-    <h2>週1で“ゲーム×経済学”の新ネタと図解</h2>
-    <p>ニュースレターに登録してサンプルPDFをチェック！</p>
-    <form class="newsletter-form">
-      <input type="email" placeholder="メールアドレス" required>
-      <button type="submit" class="btn">登録する</button>
-    </form>
-    <div class="pdf-preview-wrapper">
-      <iframe src="sample-newsletter.pdf" class="pdf-preview"></iframe>
-    </div>
-  </div>
-</div>
+      <section class="social-proof card reveal">
+        <h2>みんなに読まれています</h2>
+        <ul class="proof-list">
+          <li><strong>1,200+</strong> 名の購読者</li>
+          <li><strong>300+</strong> 件のXでの言及</li>
+          <li><strong>5</strong> 社のメディア掲載</li>
+        </ul>
+      </section>
+    </main>
 
-<footer class="site-footer">
-  <div class="container footer-content">
-    <div class="footer-col">
-      <h3>サイトマップ</h3>
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./projects.html">Projects</a></li>
-        <li><a href="./about.html">About</a></li>
-      </ul>
+    <div id="exit-modal" class="modal">
+      <div class="modal-content">
+        <button id="modal-close">&times;</button>
+        <h2>週1で“ゲーム×経済学”の新ネタと図解</h2>
+        <p>ニュースレターに登録してサンプルPDFをチェック！</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="メールアドレス" required />
+          <button type="submit" class="btn">登録する</button>
+        </form>
+        <div class="pdf-preview-wrapper">
+          <iframe src="sample-newsletter.pdf" class="pdf-preview"></iframe>
+        </div>
+      </div>
     </div>
-    <div class="footer-col">
-      <h3>用語集 & ポリシー</h3>
-      <ul>
-        <li><a href="./glossary.html">用語集</a></li>
-        <li><a href="./policy.html">運営ポリシー</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>連絡先</h3>
-      <ul>
-        <li><a href="mailto:info@example.com">info@example.com</a></li>
-        <li><a href="https://x.com" target="_blank" rel="noopener">X</a></li>
-        <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="container copyright">
-    <small>© <span id="year"></span> げーけい部！</small>
-  </div>
-</footer>
-<script src="./script.js"></script>
-</body>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-col">
+          <h3>サイトマップ</h3>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>用語集 & ポリシー</h3>
+          <ul>
+            <li><a href="./glossary.html">用語集</a></li>
+            <li><a href="./policy.html">運営ポリシー</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>連絡先</h3>
+          <ul>
+            <li><a href="mailto:info@example.com">info@example.com</a></li>
+            <li>
+              <a href="https://x.com" target="_blank" rel="noopener">X</a>
+            </li>
+            <li>
+              <a href="https://github.com" target="_blank" rel="noopener"
+                >GitHub</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container copyright">
+        <small>© <span id="year"></span> げーけい部！</small>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
 </html>
