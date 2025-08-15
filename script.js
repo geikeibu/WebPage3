@@ -61,6 +61,7 @@ if(exitModal){
   });
 }
 
+
 // ミニ実験：価格と数量で売上を表示
 const priceInput = document.getElementById('price');
 const qtyInput = document.getElementById('quantity');
