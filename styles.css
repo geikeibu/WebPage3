@@ -124,6 +124,15 @@ a:hover{color:#0D0F1A;background:var(--neon-magenta);box-shadow:0 0 12px var(--n
 /* Social proof */
 .proof-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
 
+/* Playground mini experiment */
+.playground .sliders{display:flex;flex-direction:column;gap:8px;margin:12px 0}
+.playground label{display:flex;gap:8px;align-items:center}
+.playground svg{margin-top:12px;background:#0D0F1A;border:1px solid rgba(255,255,255,.1);border-radius:8px;width:100%;max-width:240px;height:200px}
+
+/* Diagram teaser */
+.diagram-teaser{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.diagram-teaser svg{margin:12px 0}
+
 /* Modal */
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;align-items:center;justify-content:center;padding:24px;z-index:100}
 .modal.show{display:flex}

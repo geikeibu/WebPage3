@@ -43,23 +43,42 @@
       </div>
     </div>
   </section>
-  <section class="series-hub container reveal" id="series" style="margin-top:32px">
-    <h2>連載ハブ</h2>
-    <div class="series-scroll">
-      <article class="series-card">
-        <div class="thumb"></div>
-        <h3>ゲーム理論をマンガで</h3>
-      </article>
-      <article class="series-card">
-        <div class="thumb"></div>
-        <h3>経済学で見る人気ゲーム</h3>
-      </article>
-      <article class="series-card">
-        <div class="thumb"></div>
-        <h3>インディー開発の現場から</h3>
-      </article>
+
+
+  <section id="labs" class="container reveal" style="margin-top:32px">
+    <h2>学べる遊び場</h2>
+    <div class="grid" style="margin-top:16px">
+      <div class="card playground">
+        <h3>需要と供給を動かす</h3>
+        <p>スライダーで価格と数量を変えて売上を体験。<a href="projects.html">続きは記事で</a></p>
+        <div class="sliders">
+          <label>価格<input type="range" id="price" min="0" max="100" value="50"></label>
+          <label>数量<input type="range" id="quantity" min="0" max="100" value="50"></label>
+        </div>
+        <svg id="sd-chart" viewBox="0 0 200 200">
+          <line x1="0" y1="200" x2="200" y2="0" stroke="var(--neon-magenta)" stroke-width="2"/>
+          <line x1="0" y1="0" x2="200" y2="200" stroke="var(--neon-cyan)" stroke-width="2"/>
+          <circle id="eqPoint" cx="100" cy="100" r="5" fill="#fff"/>
+        </svg>
+        <div id="revenue">売上: ¥2500</div>
+      </div>
+      <a class="card diagram-teaser" href="projects.html">
+        <h3>今週の1分図解</h3>
+        <svg viewBox="0 0 300 160" class="diagram">
+          <polyline points="20,120 80,80 140,100 200,60 260,70" fill="none" stroke="var(--neon-cyan)" stroke-width="3" stroke-linejoin="round"/>
+          <g fill="var(--neon-magenta)">
+            <circle cx="20" cy="120" r="5"/>
+            <circle cx="80" cy="80" r="5"/>
+            <circle cx="140" cy="100" r="5"/>
+            <circle cx="200" cy="60" r="5"/>
+            <circle cx="260" cy="70" r="5"/>
+          </g>
+        </svg>
+        <p>クリックで記事へ</p>
+      </a>
     </div>
   </section>
+
 
 
   <section class="topics card reveal container" id="latest" style="margin-top:32px">
